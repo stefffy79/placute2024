@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <style>
+                body {
+                        margin: 0;
+                        padding-top: 0;
+                        justify-content: center;
+                        align-items: center;
+                        background-image: url(https://i.ibb.co/Tqv6zFz/IMG-20240919-142317.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        background-attachment: fixed;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: black;
+                        font-size: 15px;
+
+                }
+
+                #search {
+                        width: 80%;
+                        margin-bottom: 10px;
+                        border-radius: 8px;
+                        background-color: #ffffff;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: #000000;
+                        font-variant: small-caps;
+                        height: 30px;
+                        font-size: 25px;
+                        margin-top: 15px;
+                        margin-left: 40px;
+                }
+
+                ul {
+                        list-style-type: none;
+                        display: contents;
+                        position: absolute;
+                        background-color: #ffffff;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70%;
+                        margin-left: 40px;
+                        margin-right: 40px;
+                        border-radius: 8px;
+
+                }
+
+                .link {
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: black;
+                        font-size: 20px;
+                        display: list-item;
+                        margin-bottom: 15px;
+                        margin-top: 15px;
+                }
+
+                #link-list {
+                        display: none;
+                        position: absolute;
+                        height: auto;
+                        overflow: auto;
+                        font-size: 20px;
+
+                }
+
+                .foto {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+                        margin-top: 10px;
+                        border-radius: 25px;
+                }
+
+                footer {
+                        position: fixed;
+                        bottom: 0px;
+                        font-size: 10px;
+                        text-align: center;
+                        width: 100%;
+                        padding-top: 0px;
+                        padding-bottom: 0px;
+                        background-color: #ffffff;
+
+                }
+
+                .vogel {
+                        font-size: 12px;
+                        color: blue;
+                        -webkit-text-stroke: 0.5px rgb(2, 0, 0);
+                }
+        </style>
+</head>
+
+<body>
+        <img class="foto" src="https://i.ibb.co/kJPxLC6/20240422-093054.png" alt="Descriere imagine"><br>
+        <input type="text" id="search" placeholder="Caută după țară..." onkeyup="searchLinks()">
+
+        <ul id="link-list" style="display: none;">
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ACoMQoj7Lq6pBQ6_DLvNdUHup0FS4nRy/view?usp=drive_link">🇦🇫
+                                Afganistan<span style="display: none;">AFGHANISTAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Px5GE7qr6tokeuV1gxBse49euWKTzCYT/view?usp=drive_link">🇦🇱
+                                Albania<span style="display: none;">ALBANIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AGpNegZyYm1ah1e8LO06zvk8L7MveZvc/view?usp=drive_link">🇩🇿
+                                Algeria<span style="display: none;">ALGERIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AO1IOGMiOi2q1JkUj5Vgn1taa3SKIxq6/view?usp=drive_link">🇦🇸
+                                Samoa
+                                Americană<span style="display: none;">AMERICAN
+                                        SAMOA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ARI7X9yfpOSSXKtG60slz1saaiXlQvTz/view?usp=drive_link">🇦🇩
+                                Andorra<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ARuuKByl0xZ5u4ZP9TYipCosmmxZMagI/view?usp=drive_link">🇦🇴
+                                Angola<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AWOLjlyyv2RETL7qRHBQ5cZ979P355XA/view?usp=drive_link">🇦🇮
+                                Anguilla<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AZuvHk1cLA0BNN23FL5ePAkbQDc_XO5k/view?usp=drive_link">🇦🇬
+                                Antigua
+                                și Barbuda<span style="display: none;">ANTIGUA AND
+                                        BARBUDA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1A_YJ5sSr9-uSXheLGyI1drUbRrTN-Wf_/view?usp=drive_link">🇦🇷
+                                Argentina<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AaEZzITPLT4h13cR2n6etZSXCI0ddn86/view?usp=drive_link">🇦🇲
+                                Armenia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AehkBqIZVMXGEvxUFfKKOJ1YZpUkY4jl/view?usp=drive_link">🇦🇼
+                                Aruba<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AfVnvjWu04X6dzn2KZ2QyXuNN0Ohl8Dl/view?usp=drive_link">🇦🇺
+                                Australia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Agdqjk3h71wvGBnwJpdSe0eA8LCgU7Vb/view?usp=drive_link">🇦🇹
+                                Austria<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AiRCQDkqvnLZRcupscJAUuLFF8noNEw_/view?usp=drive_link">🇦🇿
+                                Azerbaijan<span style="display: none;">AZERBAIJAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AnUZPSSd2EuDdaLI2w_pN3Gq_MQnkzHu/view?usp=drive_link">🇧🇸
+                                Bahamas<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ApAmX3uKZBcQSHDtOlQrShMFrcdz0oht/view?usp=drive_link">🇧🇭
+                                Bahrain<span style="display: none;">BAHRAIN</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AtuBUoKKrNdpriMz6SwC3dSVMOaVOLb2/view?usp=drive_link">🇧🇩
+                                Bangladesh<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AuPvcCbxb11CxD_PHNsEWYWbO6fR8zJE/view?usp=drive_link">🇧🇧
+                                Barbados<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1B3ZtjNe4yPrB5mg6_5tchiGwdQxSYF1u/view?usp=drive_link">🇧🇾
+                                Belarus<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1BKU5hXG0WYltAaiQyUVLd6C4EJWB4q2h/view?usp=drive_link">🇧🇪
+                                Belgia<span style="display: none;">BELGIUM</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1BL7diNtDR0odIW8MxDoJXRACo3MVUES-/view?usp=drive_link">🇧🇿
+                                Belize<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1OaSRmGlBBPzq6l4a8jimKD7YQbRWuPtR/view?usp=drive_link">🇧🇯
+                                Benin<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1CxEd9koz3JXFhpxY8kjpJoWkgU2TG0f-/view?usp=drive_link">🇧🇲
+                                Bermuda<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1iKn0oKgNVAMjdB5oWO__V9WE7CIpWRhg/view?usp=drive_link">🇧🇹
+                                Bhutan<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Hwcb1cf5jhsoi3clg7zkjKxoH6yJiA2n/view?usp=drive_link">🇧🇴
+                                Bolivia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1HnpCiAEtjuPzIBfNtmV9TUGI_kClPKLH/view?usp=drive_link">🇧🇦
+                                Bosnia-H.<span style="display: none;">BOSNIA AND
+                                        HERZEGOVINA,HERTEGOVINA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1KJp4TLOClx1XKrW4Dow7ce5xyTrhtzmr/view?usp=drive_link">🇧🇼
+                                Botswana<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/164MCIzzhCQC_s-ootpUGLctGzX9p98vQ/view?usp=drive_link">🇧🇷
+                                Brazilia<span style="display: none;">BRAZIL</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1L4GGQb7l7irfz_Wov8GogoTIFiVhB4ap/view?usp=drive_link">🇻🇬
+                                Insulele Virgine Britanice<span style="display: none;">BRITISH
+                                        VIRGIN ISLANDS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1C_aSI9XCgDICSEvwKsYNa_lHEZxfUOP3/view?usp=drive_link">🇧🇳
+                                Brunei<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1cauTNGJ-N9S4Ry0PVdxW0jKYfMRThH0v/view?usp=drive_link">🇧🇬
+                                Bulgaria<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1uAvuYEifMqyX6FRmRPg_79kzBX4RTlkn/view?usp=drive_link">🇧🇫
+                                Burkina Faso<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1PGAo90RcjlFPNIk69Lrpta-E2dpXUzRz/view?usp=drive_link">🇧🇮
+                                Burundi<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ZXsDgjFCwAb8TyK5ZoKGthdakX1MmBd_/view?usp=drive_link">🇰🇭
+                                Cambodgia<span style="display: none;">CAMBODIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1GxRHLn1Q-xS9vFEmYOr6c31XIS3trQQw/view?usp=drive_link">🇨🇲
+                                Camerun<span style="display: none;">CAMEROON</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1kiWZ61TET6fA2xYBGc95EiCt5bxK49J1/view?usp=drive_link">🇨🇦
+                                Canada<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Azy0_Rl0uufIPIL1EVvJqdwWnrBG7VMY/view?usp=drive_link">🇨🇻
+                                Capul Verde<span style="display: none;">CAPE
+                                        VERDE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1diThrwcfvP-SfVDFKGnnfV3lnaTcqq31/view?usp=drive_link">🇰🇾
+                                Insulele Cayman<span style="display: none;">CAYMAN
+                                        ISLANDS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/11JqUpEgzhpyAvuD9DFQD2rz9wdx4c0Y3/view?usp=drive_link">🇨🇫
+                                Africa Centrală<span style="display: none;">CENTRAL
+                                        AFRICAN REPUBLIC,REPUBLICA CENTRAFRICANA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1_hA9MJRft5iaJjBsAmG9AbuJPMKCQuBm/view?usp=drive_link">🇹🇩
+                                Ciad<span style="display: none;">CHAD</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ARD1rb1Q8PyQokYBDQLMGTFxbFwOWS05/view?usp=drive_link">🇨🇱
+                                Chile<span style="display: none;">CHILI</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Op4QHoYYoJZhTWJc6tDqzT1l-v_-6-ML/view?usp=drive_link">🇨🇳
+                                China<span style="display: none;">KINA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ih72RhaQ_rrP5CwKw7aiDkIlsWunroU6/view?usp=drive_link">🇨🇽
+                                Insula Christmas<span style="display: none;">CHRISTMAS
+                                        ISLAND, CRACIUNULUI</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Rjh_kFt0j0gUoLazg0hWsXmTUJo-UuCn/view?usp=drive_link">🇨🇨
+                                Insulele Cocos<span style="display: none;">COCOS (KEELING)
+                                        ISLANDS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1TLHuxjJRkjEqn0IiCBzeOE_BJkIQluqJ/view?usp=drive_link">🇨🇴
+                                Columbia<span style="display: none;">COLOMBIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1rEiRochV4s8G4Q63vIQxvsw0E0BP9Udd/view?usp=drive_link">🇰🇲
+                                Comore<span style="display: none;">COMOROS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1But4lZJjp4wVco261sFKb2Uja6jB_5Vs/view?usp=drive_link">🇨🇬
+                                Congo<span style="display: none;">CONGO-BRAZZAVILLE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1jFTSyTud-pDip9VX-yUqjTKj5kDX_FdQ/view?usp=drive_link">🇨🇰
+                                Insulele Cook<span style="display: none;">COOK
+                                        ISLANDS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AZu6X7BeMIxHctwdxbDI0qdvmdsLNlu_/view?usp=drive_link">🇨🇷
+                                Costa Rica<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1fl22tnkz4N6Tgvr3qBzBrlN_PPZOaI5B/view?usp=drive_link">🇭🇷
+                                Croația<span style="display: none;">CROATIA,
+                                        HORVATORSZAG</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1utaaDIPsq5CZrk9qXbSk_FXu3PnCJpb0/view?usp=drive_link">🇨🇺
+                                Cuba<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1I7xNIhiEBTYFzA7Ebr51Q3pCLIptREIC/view?usp=drive_link">🇨🇼
+                                Curaçao<span style="display: none;">CURACAO</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/152CGANPeiCgNIC-pZBgYzS-iku6qKFbz/view?usp=drive_link">🇨🇾
+                                Cipru<span style="display: none;">CYPRUS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1A2EUXqBwcjYX56BxpQqWVrO2lmog5NEd/view?usp=drive_link">🇨🇿
+                                Cehia<span style="display: none;">CZECH
+                                        REPUBLIC</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/105Wl6-_7prhLZV5mrec1Vwi9b2c9HzKq/view?usp=drive_link">🇨🇩
+                                R.D. Congo<span style="display: none;">DEMOCRATIC REPUBLIC
+                                        OF THE CONGO</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1CTGUJzh4Hy8zY9LVOAiLD3WkJFV3p2I-/view?usp=sharing">🇩🇰
+                                Danemarca<span style="display: none;">DENMARK</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1wA4AObHuH0cprJzPVmqxPBw257iqDxKX/view?usp=sharing">🇫🇴
+                                Insulele Feroe<span style="display: none;">DENMARK,
+                                        Faeröer, Islands, Føroyar</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1iGZ3KegrgURghqbkkSKDNxMJkCPlL8XI/view?usp=sharing">🇬🇱
+                                Groenlanda<span style="display: none;">DENMARK,Greenland,
+                                        Grønland,
+                                        Kalaallit, Nunaat</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1xocaIv6i6E9G_M2jpDdWC0-j2a_1xU37/view?usp=drive_link">🇩🇯
+                                Djibouti<span style="display: none;">DJIBOUTI</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/11LYVr9IBOTmFmShq2ebIu8mgNUMonfP5/view?usp=drive_link">🇩🇲
+                                Dominica<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1zgb9wexicbQECD3bc3A5JRglmuCVkSKU/view?usp=drive_link">🇩🇴
+                                R. Dominicană<span style="display: none;">DOMINICAN
+                                        REPUBLIC</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1H9feR0S8NEWrxFe_3eQKZhWzWPPuJzG3/view?usp=drive_link">🇪🇨
+                                Ecuador<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1_zWQv15t5YR30s0OnmG8mWow8aHiFTC4/view?usp=drive_link">🇪🇬
+                                Egipt<span style="display: none;">EGYPT</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1W7k7so7OKkKRhTlMF4RtIW4j1fd6B1RN/view?usp=drive_link">🇸🇻
+                                El Salvador<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1v_lgi6TzOH5205Ouqm2JQ4DM1DfEM0qf/view?usp=drive_link">🇬🇶
+                                Guineea Ecuatorială<span style="display: none;">EQUATORIAL
+                                        GUINEA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1eHPxiu2tAflwqTluuP4t7-wxyhvbzW-u/view?usp=drive_link">🇪🇷
+                                Eritrea<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/19YFh7NA_TdKFylS_DHWrNmhHfgK80nCN/view?usp=drive_link">🇪🇪
+                                Estonia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/13ec3zIPlTGhTcbX0tK4bmOGrS7brkpyt/view?usp=drive_link">🇪🇹
+                                Etiopia<span style="display: none;">ETHIOPIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1dF361aSWAsriA3MkuRoPb-skYXaZXkTi/view?usp=drive_link">🇫🇰
+                                Insulele Falkland<span style="display: none;">FALKLAND
+                                        ISLANDS
+                                </span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1lP19cdcgAclrAK86En-B90g-kmB42xOf/view?usp=drive_link">🇫🇯
+                                Fiji<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/18q3YL4T9Jk4a0FZOD7WnuhS6cHPpTWmc/view?usp=sharing">🇫🇮
+                                Finlanda<span style="display: none;">FINLAND,Suomi</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AO0Uh9xu3JKz59sb-dOhM3PcPtOMlfwd/view?usp=sharing">🇦🇽
+                                Insulele Åland<span style="display: none;">FINLAND,ÅLAND,ALAND</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1flA5-7MOEPAGTc69qpn85CN2xRnKIJeO/view?usp=drive_link">🇫🇷
+                                Franța<span style="display: none;">FRANCE,FRANTA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1gjxmsHUZdu-0T7SZGScwQVZi4zph6UZe/view?usp=drive_link">🇬🇵
+                                Guadelupa<span style="display: none;">GUADELOUPE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/120ELwme9T8fSRmr_DJ4k5_O5ZrD-XuMb/view?usp=drive_link">🇲🇶
+                                Martinica<span style="display: none;">MARTINIQUE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1VzGhrwy7AEkvtmwdyuGol4M313-FJ37S/view?usp=drive_link">🇬🇫
+                                Guiana Franceză<span style="display: none;">FRENCH
+                                        GUIANA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1f_Y4VXkCIyFJ-gxQrv8XsP2izM2COIbi/view?usp=drive_link">🇷🇪
+                                Reunion<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1caz9RGz1BtUuBjJoFN0AFn9h8cc6zq1U/view?usp=drive_link">🇾🇹
+                                Mayotte<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1mhDubzlPGLxKmHYj2eM8ZwgoyGF-jcJL/view?usp=drive_link">🇧🇱
+                                Saint Barthélemy<span style="display: none;">SAINT
+                                        BARTHELEMY,SFANTUL</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1DcFGKZEHyqmrnr4GAPL7mQnC950ui6bv/view?usp=drive_link">🇲🇫
+                                Saint Martin<span style="display: none;">SAINT
+                                        MARTIN,SFANTUL</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1cOyhtloxxuZOBOMjQIVWfNb7elwH1LZm/view?usp=drive_link">🇵🇲
+                                St. Pierre & Miquelon<span style="display: none;">SAINT
+                                        PIERRE and MIQUELON,SFANTUL</span>
+                        </a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/17eyWF3TZlnR40eixi1F9NyXOARTc0PQz/view?usp=drive_link">🇵🇫
+                                Polinezia Franceză<span style="display: none;">FRENCH,
+                                        POLYNESIA, FRANCEZA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1POrhA-dAeJU8n1axGKEvGitN9qI3iId8/view?usp=drive_link">🇬🇦
+                                Gabon<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1p0CKS2dCvW_agjP5v0fp1NBPWiCEBKTF/view?usp=drive_link">🇬🇲
+                                Gambia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Gm71QH9UDexiXztq2Pu9mRLIiXAamt8B/view?usp=drive_link">🇬🇪
+                                Georgia<span style="display: none;">GEORGIA,
+                                        Republic</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Ck2VVAFM1ngbJEqCYCRXErRyWrAZ0xpE/view?usp=drive_link">🇬🇪
+                                Abhazia<span style="display: none;">ABKHAZIA,
+                                        GEORGIA,
+                                        Republic</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1KES-4c0f1Hbypcin0ITvPYec54FEKtY-/view?usp=drive_link">🇬🇪
+                                Osetia de Sud<span style="display: none;">South Ossetia,
+                                        GEORGIA, Republic</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Tn_uZBGLsbtPkWLnUVVsiUh3RYIXeSN4/view?usp=drive_link">🇩🇪
+                                Germania<span style="display: none;">GERMANY,
+                                        NEMETORSZAG,
+                                        DEUTCHELAND</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1LBZeqgMVP93WCcRqP06rLFMgzK7sYht6/view?usp=drive_link">🇬🇭
+                                Ghana<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1kfzLX9to4Qo4fqGvXNHtHBuC5eBZqYEI/view?usp=drive_link">🇬🇷
+                                Grecia<span style="display: none;">GREECE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1nf40gGZ67uD1nF7D6mimA3TrlIvePK4T/view?usp=drive_link">🇬🇩
+                                Grenada<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1opkcFd_8N7gMt9iu9W48ppQ2osyzMJP7/view?usp=drive_link">🇬🇹
+                                Guatemala<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/157XAOUZvCkD9H8ZNkiAfVbQhq6LN3ko3/view?usp=drive_link">🇬🇳
+                                Guinea<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1_U0M_rDh6kuQ-oSToFKHQ7Dlp1HNGLZ_/view?usp=drive_link">🇬🇼
+                                Guineea-Bissau<span style="display: none;">GUINEA
+                                        BASSAU</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1r1MlBENdb4dtxHuUMZPh6Yiwc38pwE_d/view?usp=drive_link">🇬🇾
+                                Guyana<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1X6YpdY-YZWcgExAijrCYSOL6AvCd_fGC/view?usp=drive_link">🇭🇹
+                                Haiti<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1po5FitF15vEIJNLKITbuhVH-LZ_Qm-kb/view?usp=drive_link">🇭🇳
+                                Honduras<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ZSnYh_UXGADswaKHW2NfHlMkgXO41aaq/view?usp=drive_link">🇭🇰
+                                Hong Kong<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1wplRgS-VQGKuF9KgOFi-lrlarp8cHD-7/view?usp=drive_link">🇭🇺
+                                Ungaria<span style="display: none;">Hungary,MAGYARORSZAG</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1a0P7AlXgowe1gDZA2Xpi9wFfcGMAWMl4/view?usp=drive_link">🇮🇸
+                                Islanda<span style="display: none;">ICELAND,
+                                        IZLAND</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/16sZyvNyKJH8pTtn26LwsE83NjWhqh9Xn/view?usp=drive_link">🇮🇳
+                                India<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1qXWoBkQ-y1zOs03oPVLynOzetsRJj4Ub/view?usp=drive_link">🇮🇩
+                                Indonezia<span style="display: none;">INDONESIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1I83bAPtnUXKllU-Nlzq1Hx5kjh5MNI_Q/view?usp=drive_link">🇮🇷
+                                Iran<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Eopcf8xtfatyXH4rIifkaUlxvdo7ymOW/view?usp=drive_link">🇮🇶
+                                Irak<span style="display: none;">IRAQ</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1_TmDzmoMXVIKis3tPgUYQXC9Z5cyXlAF/view?usp=drive_link">🇮🇶
+                                Irak-Kurdistan<span style="display: none;">IRAQ,
+                                        Kurdistan, region</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/105Yzcj_LKPau9O8jCWPqPu98bl4TjXpm/view?usp=drive_link">🇮🇪
+                                Irlanda<span style="display: none;">IRELAND,
+                                        IRORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/17QqWK8lPwF5cO5zpBQgjE0tZ0oSFwi3s/view?usp=drive_link">🇮🇱
+                                Israel<span style="display: none;">ISRAEL,
+                                        IZRAEL</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1rsgYdSxa7bbPtrgujsj_iZ729YW0k6Lf/view?usp=drive_link">🇮🇹
+                                Italia<span style="display: none;">ITALY,
+                                        OLASZORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ArTdcGmR2ujZ_3UmA944BjUlKUpe0Cih/view?usp=drive_link">🇨🇮
+                                Coasta de Fildeş<span style="display: none;">IVORY COAST,
+                                        FILDES, ELEFANTCSONTPART, Côte d'Ivoire</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1gKBzfHPF2Ogb5OO4hDfE00jlv3mJOb0R/view?usp=drive_link">🇯🇲
+                                Jamaica<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1UVObgeMQ97g8T0zoWR-He0tLuJGmt7ft/view?usp=drive_link">🇯🇵
+                                Japonia<span style="display: none;">JAPAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1S-ch6pY4YH8giTQkNWWUT1d3GUdWNfEt/view?usp=drive_link">🇯🇴
+                                Jordania<span style="display: none;">JORDAN</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1rRXvpGNN2cFjwPBaqodwLHTqR3LFSMmt/view?usp=drive_link">🇰🇿
+                                Kazahstan<span style="display: none;">KAZACKHSTAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1DNtIg0uKqX_fEUX_8zVYUIx0GmQD_cjn/view?usp=drive_link">🇰🇪
+                                Kenya<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1XgOV-C2YvCJLv-oJ8LiUePpWfDU3KwUj/view?usp=drive_link">🇰🇮
+                                Kiribati<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1wjvWKOFxlACFfcvrO_QcwlO7wGXj1vIS/view?usp=drive_link">🇽🇰
+                                Kosovo<span style="display: none;">KOSOVO
+                                        UNSCR
+                                        1244</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1du9BESfLk11CGILtPzOYzPIHHBD8SXG8/view?usp=drive_link">🇰🇼
+                                Kuweit<span style="display: none;">KUWAIT</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1sC1-kKyfjlkVv4tYtmPi2C9rUUDFgG7P/view?usp=drive_link">🇰🇬
+                                Kirghizstan<span style="display: none;">KYRGYZSTAN,
+                                        Kârgâzstan</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/19V07Px9r8J1mTuCdFO_MImAkOQkHAJqJ/view?usp=drive_link">🇱🇦
+                                Laos<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1apxRB0cNAqmUQzaOlD0wQrW75gBm9CQF/view?usp=drive_link">🇱🇻
+                                Letonia<span style="display: none;">LATVIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/12vwY4_FqE8Hu4KueRuoFJ-VC1398wv5B/view?usp=drive_link">🇱🇧
+                                Liban<span style="display: none;">LEBANON</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1gHUXPtYP7PzPqbONQyxXNG60LoufrrnJ/view?usp=drive_link">🇱🇸
+                                Lesotho<span style="display: none;">LESOTHO</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1pamd97hhaWwuxT2SRSEFs1k5weXc1MJU/view?usp=drive_link">🇱🇷
+                                Liberia<span style="display: none;">LIBERIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1AZw-cealDMu0I69OQdWDiXgPZEVYx8SE/view?usp=drive_link">🇱🇾
+                                Libia<span style="display: none;">LIBYA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/181C85BGZcHXiFeE8lEm1pb544uMQ4Hie/view?usp=drive_link">🇱🇮
+                                Liechtenstein<span style="display: none;">LIECHTENSTEIN</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1t1HIiif9kSJG0X3FWACkztCHHhCwrH83/view?usp=drive_link">🇱🇹
+                                Lituania<span style="display: none;">LITHUANIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1fV4nKzBZsHixtOkl-LmVfxI0uakJb0ym/view?usp=drive_link">🇱🇺
+                                Luxemburg<span style="display: none;">LUXEMBOURG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1w0NsJbxDNVzfj1bzbbTFtKAYI2Y3JGgB/view?usp=drive_link">🇲🇴
+                                Macao<span style="display: none;">MACAU</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/14mM65X64yl6vH5iJdSB5TcnQWXTNutfo/view?usp=drive_link">🇲🇰
+                                Macedonia de Nord<span style="display: none;">REPUBLIC of
+                                        NORTH MACEDONIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1tfUfwfFktkTAr-7kYC4JA3H8Xe0xrMYX/view?usp=drive_link">🇲🇬
+                                Madagascar<span style="display: none;">MADAGASCAR</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1XtpC1whD8rSSBMVSVo_SH8niQ6-OdTlN/view?usp=drive_link">🇲🇼
+                                Malawi<span style="display: none;">MALAWI</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1k94qcTA_isHGA_RY2YYmO_7-J6yuoGzl/view?usp=drive_link">🇲🇾
+                                Malaysia<span style="display: none;">MALAYSIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1APMZ9NtwKh-9BvYQi8sZXQnq0kjZedrJ/view?usp=drive_link">🇲🇻
+                                Maldive<span style="display: none;">MALDIVES</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/192KuPcaDHQJv8NzsGPwSWPKKNLZVNDhS/view?usp=drive_link">🇲🇱
+                                Mali<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1gE9grrJiGkNKQO3cW9vdv190xfIVdVub/view?usp=drive_link">🇲🇹
+                                Malta<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Exv2Unh_po6KyZc03nz3yFkmlxruTovQ/view?usp=drive_link">🇲🇷
+                                Mauritania<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/15myzOTnGl4JWhFkTxDbq-_rpv81SmZPf/view?usp=drive_link">🇲🇺
+                                Mauritius<span style="display: none;">MAURITIUS</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/102bvG6dZ5XiMhsd3X4R9zol2pwx2iFYI/view?usp=drive_link">🇲🇽
+                                Mexic<span style="display: none;">MEXICO</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1UnARw0t4RWS-Tu5t4_1WNHpzQuDMczgK/view?usp=drive_link">🇲🇩
+                                Moldova<span style="display: none;">MOLDOVA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1stlauFLejb9i1j3jOkhpUcNNYLYllPeZ/view?usp=drive_link">🇲🇩
+                                Moldova (Transnistria)<span style="display: none;">Moldovan Republic
+                                        of Transnistria</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1H20u4JFQI6wLFrZ7euaHPNYOc1d8AMp7/view?usp=drive_link">🇲🇨
+                                Monaco<span style="display: none;">MONACO</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1godYKu39K2l2A6qwLqAvlKqw-YkOSSt5/view?usp=drive_link">🇲🇳
+                                Mongolia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Kae0kJwP8bbGh2Igy_yHr4U81Ccx4y6C/view?usp=drive_link">🇲🇪
+                                Montenegro<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1l4-7XMVdbURtVxLBDvhUUmXes8RpaeTS/view?usp=drive_link">🇲🇸
+                                Montserrat<span style="display: none;">MONTSERRAT</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1vScfOzKXZVuDLQUu6hZ4WUmYpTZW81ZB/view?usp=drive_link">🇲🇦
+                                Maroc<span style="display: none;">MOROCCO</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1WmfhuCQsSYTaKJVQxFiwndSayuPvx4Lm/view?usp=drive_link">🇲🇿
+                                Mozambic<span style="display: none;">MOZAMBIQUE</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1BG7nEdHrjL1S1T99vYU7qsVdYjNKiJ6g/view?usp=drive_link">🇲🇲
+                                Myanmar<span style="display: none;">Birmania</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1-W71QbZHPh8FrnS81QT6jvjJb5FCNcJs/view?usp=drive_link">🇳🇵
+                                Nepal<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1cPXqo7UjzIs8vKIzFSLmZKuDKFRg5Z9c/view?usp=drive_link">🇳🇦
+                                Namibia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1qVP9YoRBXgaPt1rAWxh6AfolYAWLFsL0/view?usp=drive_link">🇳🇱
+                                Țările de Jos<span style="display: none;">THE
+                                        NETHERLANDS,
+                                        OLANDA, HOLLANDIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1gigBEMLKINe3JPMVSnjcO61EYVrOvC9F/view?usp=drive_link">🇳🇨
+                                Noua Caledonie<span style="display: none;">NEW
+                                        CALEDONIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ZSUaqoPLcU9cMCj-nd01Vi3qyXqp-acM/view?usp=drive_link">🇳🇿
+                                Noua Zeelandă<span style="display: none;">NEW
+                                        ZEALAND</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1tfCkhIi72JuasgHikANc8YatBRFEa9hh/view?usp=drive_link">🇳🇮
+                                Nicaragua<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1RY1GlWGLBjkRDv1Hkby6fv-pakuWRyj3/view?usp=drive_link">🇳🇪
+                                Niger<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/11qRPutezpdmVZJEwYChpHLI8YrxJIDwB/view?usp=drive_link">🇳🇬
+                                Nigeria<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1g2AtjRe2M-5cjvbjhtWrcM7bF0oYhr6Y/view?usp=drive_link">🇰🇵
+                                Coreea de Nord<span style="display: none;">NORTH
+                                        KOREA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ZC3vF37PW6DbHorkdyI4-uk_2-GwX82P/view?usp=drive_link">🇳🇴
+                                Norvegia<span style="display: none;">NORWAY</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1BXUtBvdI-VXOSPgtvLepAMrsrIORftrT/view?usp=drive_link">🇴🇲
+                                Oman<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1RSaLVRrdM96ioPDJXi0vdUjatSWGDxc3/view?usp=drive_link">🇵🇰
+                                Pakistan<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1MpTuycfxT8E5GntrC1K4-o8FfIIYde2E/view?usp=drive_link">🇵🇸
+                                Palestina (Gaza)<span style="display: none;">PALESTINE,
+                                        GAZA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1UvfVlMSC7I1rn6Kjwnj9OgoeLYX_v78i/view?usp=drive_link">🇵🇸
+                                Palestina (WestBank)<span style="display: none;">PALESTINE, WEST
+                                        BANK</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/18-AtRPtYdwBEe_GAZCaFrwEnbi-heqYC/view?usp=drive_link">🇵🇦
+                                Panama<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/14bTVJ9SMawzLMxc6UMHKcBBKhlGPcwbh/view?usp=drive_link">🇵🇾
+                                Paraguay<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1fx_SFWFjtWd20joc3JgXAQ-OSVHLEHAM/view?usp=drive_link">🇵🇪
+                                Peru<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1We3QyNIXKxWxGt77tedH2wTqeIqKM7kp/view?usp=drive_link">🇵🇭
+                                Filipine<span style="display: none;">PHILLIPINES</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1wGjZ_QTEZDwv3E_mO0GmUc6NG7_tF-kH/view?usp=drive_link">🇵🇱
+                                Polonia<span style="display: none;">POLAND,
+                                        LENGYELORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1r_2o1RNRHQ8iUdqkPqnqQvmX0dOyurG8/view?usp=drive_link">🇵🇹
+                                Portugalia<span style="display: none;">PORTUGAL</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1mzFEFxMaxFXpb9rPjzdwqZ24ZMue3-4_/view?usp=drive_link">🇵🇷
+                                Puerto Rico<span style="display: none;">PUERTO
+                                        RICO</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1vOhOqRCdHnHpVymZzh-5mSG58yEvzH8p/view?usp=drive_link">🇶🇦
+                                Qatar<span style="display: none;">QATAR</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1aZTVqHrbpiiwZkf-SuRs2BM-GvdFId3D/view?usp=drive_link">🇷🇴
+                                România<span style="display: none;">ROMANIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1DmxIjvlzjoJ_6nLTBMgyCoz7pR66yLJm/view?usp=drive_link">🇷🇺
+                                Rusia<span style="display: none;">RUSSIA,
+                                        OROSZORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1hI6cRF94ga4W0FO8JmnRTO3kMG0BJI5F/view?usp=drive_link">🇷🇼
+                                Rwanda<span style="display: none;">RUANDA,</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1z84dNl3vw1jcx48_kST5gMirvCn7i20l/view?usp=drive_link">🇰🇳
+                                Saint Kitts și Nevis<span style="display: none;">SAINT
+                                        KITTS and NEVIS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1FzB5TMqravJc8UTnKJH2AdYIYvSW7Wgx/view?usp=drive_link">🇱🇨
+                                Saint Lucia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1nb_ybohZE8IkDu2K0pYLjShnNtSHpIdT/view?usp=drive_link">🇸🇽
+                                Saint Maarten<span style="display: none;">SAINT
+                                        MAARTEN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1tv0Xo3JEfpgFXRHuNGoHXWVnxekb_JZF/view?usp=drive_link">🇻🇨
+                                Saint Vincent şi Grenadinele<span style="display: none;">SAINT
+                                        VINCENT and the GRENADINES</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1LS3V8WNfdxt9VMKmrF-H3wbqqym0ynsq/view?usp=drive_link">🇸🇲
+                                San Marino<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1C-2taphaiFFQgRFfQoJKPo7hSvOxmmxk/view?usp=drive_link">🇼🇸
+                                Samoa<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1LlPQO7I2dDnWvLTxMeVmFlcLx71c9B6_/view?usp=drive_link">🇸🇦
+                                Arabia Saudită<span style="display: none;">SAUDI
+                                        ARABIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1cT8UOh62yEH4N7iDkGpPxXNz8hBxp-fP/view?usp=drive_link">🇸🇳
+                                Senegal<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1KMeGnDWpc2cuxyVFSY9KD11H-KCjNv1A/view?usp=drive_link">🇷🇸
+                                Serbia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1DusSgyMbhARuTWqRNnj2sPbfAIYvGUZm/view?usp=drive_link">🇸🇨
+                                Seychelles<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/10L0iMhAvt2cikWcmfK6nKurMaS2wFCke/view?usp=drive_link">🇸🇱
+                                Sierra Leone<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/15LLOa-9GAQ239xBsrifLQMQQkBXGYisq/view?usp=drive_link">🇸🇬
+                                Singapore<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1nQXtVn1G9HH1ood2vZnm4Ex54MIoYi1B/view?usp=drive_link">🇸🇰
+                                Slovacia<span style="display: none;">SLOVAKIA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1eE4yVC4J7mRmbQ35X3nbcrzIX6bzEH4i/view?usp=drive_link">🇸🇮
+                                Slovenia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ce7D_Beib9nhiWlqkgtgQM8UnxxscI_u/view?usp=drive_link">🇸🇴
+                                Somalia<span style="display: none;">SOMALIA,
+                                        PUNTLAND,
+                                        SOMALILAND,
+                                        GALMUDUG, JUBALAND</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/16kXpOLlN1I2cZcGoVC-ZBp1428AARoTb/view?usp=drive_link">🇿🇦
+                                Africa de Sud<span style="display: none;">SOUTH
+                                        AFRICA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ROZZ3f3Cwc3OX1wipao2_ypdIbZdMaZc/view?usp=drive_link">🇰🇷
+                                Coreea de Sud<span style="display: none;">SOUTH
+                                        KOREA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1bWOkaSdsMDLch8-n3FeAz9nD7aEO0BJI/view?usp=drive_link">🇸🇸
+                                Sudanul de Sud<span style="display: none;">SOUTH
+                                        SUDAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1zVPdr-pHyteVTTcjZGQd0-Uc7xeTEABW/view?usp=drive_link">🇾🇪
+                                Yemenul de Sud<span style="display: none;">South
+                                        YEMEN</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/17E94cHEpgSzLgXlJzRqRvXTZd6H1JtIz/view?usp=drive_link">🇪🇸
+                                Spania<span style="display: none;">SPAIN,
+                                        SPANYOLORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1MrPB1Ryu1j6l4jRG5vsFuDBM4HIKg-yq/view?usp=drive_link">🇱🇰
+                                Sri Lanka<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1BHdfn8hGV8pFp5FFDlYpG5IUEe46Hhx3/view?usp=drive_link">🇸🇩
+                                Sudan<span style="display: none;"></span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1M4XqclFQVC5gl1H4dcq1EgUnxG4G0CYC/view?usp=drive_link">🇸🇷
+                                Suriname<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1wzNqscXMKmy6WnlGkR-Ao6R_R_mRTBgd/view?usp=drive_link">🇸🇿
+                                eSwatini-Swaziland<span style="display: none;">ESWATINI,
+                                        SWAZILAND</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/17Bo8Bbct08cHoI9j1BeepK8JNimpbh51/view?usp=drive_link">🇸🇪
+                                Suedia<span style="display: none;">SWEDEN,
+                                        SVEDORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1yQAG9wNCBJAgbNmNGybBm6cw-LAQdgXH/view?usp=drive_link">🇨🇭
+                                Elveția<span style="display: none;">SWITZERLAND,ELVETIA,SVAJC</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Dn7Lw1l1h5gcs8C2k_eVDs3jGQdguaGP/view?usp=drive_link">🇸🇾
+                                Siria<span style="display: none;">SYRIA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1lKNpxznvrs8VMas_OYneMj4_SneJdP5a/view?usp=drive_link">🇹🇼
+                                Taiwan<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/10JkDVUGNUCB8CA58vtFOyzi0BmQcTKnW/view?usp=drive_link">🇹🇯
+                                Tadjikistan<span style="display: none;">TAJIKISTAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1R0uxrn5iHXEW3R_rNFY4FY0HYt4Gw7YF/view?usp=drive_link">🇹🇿
+                                Tanzania<span style="display: none;">TANZANIA, Tanganyika,
+                                        Zanzibar</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1EZuZVzNyxDJZBsUW0YDCBsneIBD-Iitt/view?usp=drive_link">🇹🇭
+                                Tailanda<span style="display: none;">THAILAND</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Br9lsMBWLZY1Kv17HJ1SZ-vEvj4vyv_Q/view?usp=drive_link">🇹🇬
+                                Togo<span style="display: none;">x</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1NvwEAnYJHc-x_yqHLytEiW29EtAXAXyN/view?usp=drive_link">🇹🇹
+                                Trinidad şi Tobago<span style="display: none;">TRINIDAD
+                                        and TOBAGO</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1JA00YIJdlJaT1BEclAalEFjC5zpIG1UZ/view?usp=drive_link">🇹🇳
+                                Tunisia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1GBci6aN1UERTZzpJZhboJI3iJi87mvdb/view?usp=drive_link">🇹🇷
+                                Turcia<span style="display: none;">TÜRKIYE,
+                                        TOROKORSZAG</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1ggsdrbKAFqUQUdld8-dgiiR-jjdgVt3f/view?usp=drive_link">🇹🇲
+                                Turkmenistan<span style="display: none;">TURKMENISTAN</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1h7wUgnLrgl7QGZcRTnPSM-Uvfh3yJbSq/view?usp=drive_link">🇹🇨
+                                Insulele Turks şi Caicos<span style="display: none;">TURKS
+                                        AND CAICOS ISLANDS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1bw1I9IDY3ooVevRscz98CXmpFZK81FRf/view?usp=drive_link">🇺🇬
+                                Uganda<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1l1lbNzn_NJbTutnJOus__Ckr106ZjkJD/view?usp=drive_link">🇦🇪
+                                Emiratele Arabe Unite<span style="display: none;">UNITED
+                                        ARABIC EMIRATES U.A.E, Abu Dhabi,AJMAN,DUBAI,FUJAIRAH,RAS AL KHAIMAH,SHARJAH,
+                                        UMM AL QAIWAN,
+                                </span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1VR4QrvROEeYM1ilfasIcI5ijPbFCirK5/view?usp=drive_link">🇺🇦
+                                Ucraina<span style="display: none;">UKRAINE</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1jfajLZySkkaY65eQRFsUmUHXV2sY0ltz/view?usp=drive_link">🇺🇦
+                                Ucraina (Doneţk)<span style="display: none;">UKRAINE,DONETSK</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1NMP22y6XMnNPDWMvbneR6WD7O_hf3Buf/view?usp=drive_link">🇺🇦
+                                Ucrauna (Luhansk)<span style="display: none;">UKRAINE,
+                                        LUHANSK</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1RFr7YYjG8Ze1_EAP7Xpl949lFZTxb4OA/view?usp=drive_link">🇬🇧
+                                Marea Britanie<span style="display: none;">UNITED
+                                        KINGDOM,REGATUL UNIT,UK,GB, ANGLIA,SAINT HELENA, TRISTAN DA CUNHA</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1DIWxwToBA40X137EMKHtXRZzuWb036Y_/view?usp=drive_link">🇬🇧
+                                Irlanda de Nord<span style="display: none;">NORTHERN
+                                        IRELAND</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1L_sj3kTtYGaDfV6MNHDD-u6a_uo-uWR0/view?usp=drive_link">🇯🇪
+                                Jersey<span style="display: none;">JERSEY,UK,GB</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1yCdehVJTgKLANL_GjnjwRSL3NkUQIc5d/view?usp=drive_link">🇬🇬
+                                Guernsey<span style="display: none;">GUERNSEY,UK,GB</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1xqWrQm88nINjv1yWywIjYLRkX4bynraI/view?usp=drive_link">🇮🇲
+                                Insula Man<span style="display: none;">ISLE
+                                        OF
+                                        MAN,UK,GB</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1YPcFPccbPw1fWRP4JspIf1d4_eOnvEbJ/view?usp=drive_link">🇬🇮
+                                Gibraltar<span style="display: none;">UK,
+                                        GB</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1H7YVWv9iuZXd92tGGjmdehvjfVmoGhMd/view?usp=drive_link">🇺🇸
+                                SUA<span style="display: none;">U.S.A,
+                                        AMERICA,STATELE,UNITE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1D4z_JSIKSW8ecdT1SL9uAiIeC0cRsjCo/view?usp=drive_link">🇺🇾
+                                Uruguay<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1V5pakQkyRVc6l3DwZk3Hv6i-WrhuweWf/view?usp=drive_link">🇺🇿
+                                Uzbekistan<span style="display: none;">UZBEKISTAN</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1yMscUQe203q6BnDzHiIQmq3Eo_jBIca_/view?usp=drive_link">🇻🇦
+                                Vatican<span style="display: none;">VATICAN
+                                        CITY,SFANTUL
+                                        SCAUN,HOLY,SEE</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Q2e8OF0v93j_isfY6JOaxZablAB1sCz3/view?usp=drive_link">🇻🇪
+                                Venezuela<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1XtLhQHc4DlCitsLH45txaAk39mB8Wwn6/view?usp=drive_link">🇻🇳
+                                Vietnam<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1tQBhYvkPWEehH_F40bwUV_886VJnE5L0/view?usp=drive_link">🇼🇫
+                                Wallis şi Futuna<span style="display: none;">WALLIS and
+                                        FUTUNA</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1l1jDoTVHPMPtC-O5GlPC-7-R2unnIdm-/view?usp=drive_link">🇾🇪
+                                Yemen<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1flvugZP36bhE1FyhYKufuIQnIu0xy2aE/view?usp=drive_link">🇿🇲
+                                Zambia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/14EIeRTS0yPmgNx5u1LJXlPa4FipTc-_b/view?usp=drive_link">🇿🇼
+                                Zimbabwe<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1krYf2ve94kzrMnNHMA_dt1C9paUeuEZv/view?usp=drive_link">🇻🇮
+                                Insulele Virgine Americane<span style="display: none;">
+                                        VIRGIN ISLANDS</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Ya87_sPogZpmxcp-VQSxsD5-1E4qh1KO/view?usp=drive_link">🇫🇲
+                                Micronezia<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/17NMkLxMx-npcHpKEC7cdCESzPDZaMPZ-/view?usp=drive_link">🇳🇷
+                                Nauru<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1Rb_qm5H1u1nzV7w9jk1M_SipYlKIg8Sa/view?usp=drive_link">🇵🇼
+                                Palau<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1IXGSb3aIbGDGBcNywQglnJtvESBXk_cn/view?usp=drive_link">🇵🇬
+                                Papua Noua Guinee<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1dYu3VhEnK1hJHHICI-ku92EhMi8illlc/view?usp=drive_link">🇸🇹
+                                Sao Tomé și Principe<span style="display: none;">sao tome</span></a>
+                </li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1TPygPkCv-p1ELP0-uxHJZCUofKW4_Fwn/view?usp=drive_link">🇸🇧
+                                Insula Solomon<span style="display: none;"></span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1XU_RdjumaJf2Stf_fDBkgyXq1Cg4M_UE/view?usp=drive_link">🇹🇱
+                                Timorul de Est<span style="display: none;">timorul de
+                                        vest</span></a></li>
+                <li><a class="link"
+                                href="https://drive.google.com/file/d/1aQ3hUA4d2QRgOdUk1OBSUOcAzmFfyLmG/view?usp=drive_link">🇹🇴
+                                Tonga<span style="display: none;"></span></a></li>
+        </ul>
+
+        <script>
+                function searchLinks() {
+                        var input = document.getElementById("search");
+                        var filter = input.value.toUpperCase();
+                        var ul = document.getElementById("link-list");
+                        var li = ul.getElementsByTagName("li");
+
+                        for (var i = 0; i < li.length; i++) {
+                                var a = li[i].getElementsByTagName("a")[0];
+                                var txtValue = a.textContent || a.innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                        li[i].style.display = "";
+                                } else {
+                                        li[i].style.display = "none";
+                                }
+                        }
+                        ul.style.display = "block";
+                }
+
+
+        </script>
+
+        <footer>
+                <p>© <span id="currentYear"></span> Verificări | Special thanks to <a class="vogel"
+                                href="https://drive.google.com/file/d/1A8h1Ec0LwkmaG32hkHzQfH5LOcK9RYVh/view?usp=drive_link">Mr.
+                                Floris
+                                De Vogel</a> for his support.</p>
+        </footer>
+        <script>
+
+                // JavaScript pentru a obține anul curent
+                var year = new Date().getFullYear();
+                document.getElementById("currentYear").textContent = year;
+        </script>
+</body>
+
+</html>
